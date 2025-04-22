@@ -16,7 +16,7 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    
+    /*
     listOf(
         iosX64(),
         iosArm64(),
@@ -26,7 +26,7 @@ kotlin {
             baseName = "ComposeApp"
             isStatic = true
         }
-    }
+    }*/
     
     jvm("desktop")
     
@@ -36,6 +36,8 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+
+            implementation("com.google.accompanist:accompanist-permissions:0.37.2")
         }
         commonMain.dependencies {
             implementation(compose.runtime)
