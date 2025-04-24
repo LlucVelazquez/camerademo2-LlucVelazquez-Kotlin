@@ -37,7 +37,14 @@ kotlin {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
 
+            val cameraxVersion = "1.4.2"
             implementation("com.google.accompanist:accompanist-permissions:0.37.2")
+            implementation("androidx.camera:camera-core:${cameraxVersion}")
+            implementation("androidx.camera:camera-camera2:${cameraxVersion}")
+            //implementation("androidx.camera:camera-compose:1.5.0-alpha06")
+            implementation("androidx.camera:camera-lifecycle:${cameraxVersion}")
+            implementation("androidx.camera:camera-extensions:${cameraxVersion}")
+            implementation("androidx.camera:camera-view:${cameraxVersion}")
         }
         commonMain.dependencies {
             implementation(compose.runtime)
